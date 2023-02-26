@@ -1,2 +1,50 @@
-
 /* Your CSS Code here. */
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    border: 1px solid black;
+}
+
+.face {
+    border: 1px solid #000;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+
+.front {
+    transform: translateZ(100px);
+    background-color: #f00;
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+    background-color: #00f;
+}
+
+.top {
+    transform: rotateX(90deg) translateY(-100px);
+    background-color: #0f0;
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateX(-100px);
+    background-color: #ff0;
+}
+
+.left {
+    transform: rotateY(-90deg) translateX(-100px);
+    background-color: #f0f;
+}
+
+.right {
+    transform: rotateY(90deg) translateX(100px);
+    background-color: #0ff;
+}
